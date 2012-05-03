@@ -11,6 +11,7 @@ class SecondPage(webapp2.RequestHandler):
       self.response.out.write('Hello, second!')
 
 
-app = webapp2.WSGIApplication([('/', MainPage)],
+app = webapp2.WSGIApplication([('/', MainPage),
+							   ('/second',SecondPage)],
                               debug=True)
 							  
